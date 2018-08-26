@@ -5,11 +5,11 @@
 house = float(input('Digite o valor do imóvel: R$'))
 salary = float(input('Digite o salário do comprador: R$'))
 years = int(input('Em quantos anos o comprador deseja pagar? '))
+monthly = house / (years * 12)
 colors = {'clear': '\033[m',
           'boldred': '\033[1;31m',
           'boldgreen': '\033[1;32m'}
 
-monthly = house / (years * 12)
 if monthly > (salary * 0.30):
     print('Empréstimo {}NEGADO{}!!!'.format(colors['boldred'], colors['clear']))
 else:
